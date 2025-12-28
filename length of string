@@ -1,0 +1,10 @@
+def find_length(s): 
+    count = 0 
+    for char in s: 
+        count += 1 
+    return count 
+ 
+# Using the function 
+input_string = input("Enter any string:") 
+length = find_length(input_string) 
+print("The length of the string is:", length) 
