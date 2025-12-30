@@ -1,0 +1,6 @@
+def count_vowels(text): 
+    return sum(text.lower().count(vowel) for vowel in 'aeiou') 
+ 
+text = "Hello, World!" 
+vowel_count = count_vowels(text) 
+print(f"Number of vowels: {vowel_count}") 
