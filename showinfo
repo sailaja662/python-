@@ -1,0 +1,6 @@
+def showinfo( name, city = "Hyderabad" ): 
+   print ("Name:", name) 
+   print ("City:", city) 
+   return 
+showinfo(name = "Ansh", city = "Delhi") 
+showinfo(name = "Shrey") 
