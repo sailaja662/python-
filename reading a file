@@ -1,0 +1,16 @@
+file_path = 'example.txt'  # Replace with your file path 
+ 
+# Open the file and read its contents 
+file = open(file_path, 'r') 
+lines = file.readlines() 
+ 
+# Counting lines, words, and characters 
+line_count = len(lines) 
+word_count = sum(len(line.split()) for line in lines) 
+char_count = sum(len(line) for line in lines) 
+ 
+# Print the results 
+print("Lines: {},Words: {},Characters: {}".format(line_count,word_count,char_count)) 
+ 
+# Close the file 
+file.close() 
