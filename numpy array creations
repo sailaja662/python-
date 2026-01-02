@@ -1,0 +1,27 @@
+ 
+import numpy as np 
+ 
+# 1. From List 
+l1 = list(map(int, input("Enter the list elements separated by space: ").split())) 
+numpy_array = np.array(l1) 
+print("Array from List:\n", numpy_array) 
+ 
+# 2. From Tuple 
+t = (6, 7, 8, 9, 10) 
+numpy_array = np.array(t) 
+print("\nArray from Tuple:\n", numpy_array) 
+ 
+# 3. From Nested List (2D Array) 
+data = [[1, 2], [3, 4], [5, 6]] 
+numpy_array = np.array(data) 
+print("\n2D Array from Nested List:\n", numpy_array) 
+ 
+# 4. Specifying Data Type 
+data_list = [1, 2, 3, 4, 5] 
+numpy_array = np.array(data_list, dtype=float) 
+print("\nArray with Float Data Type:\n", numpy_array) 
+ 
+# 5. From Existing Array 
+existing_array = np.array([1, 2, 3]) 
+new_array = np.copy(existing_array)  # Use np.copy() instead of np.array() 
+print("\nArray from Existing Array:\n", new_array) 
