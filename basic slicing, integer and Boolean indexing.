@@ -1,0 +1,25 @@
+import numpy as np 
+# Create a sample NumPy array 
+array = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9]) 
+# Basic Slicing 
+print("Basic Slicing:") 
+print(array[1:5])  # Elements from index 1 to 4 
+print(array[3:])   # Elements from index 3 onwards 
+print(array[:5])   # Elements up to index 4 
+print(array[:])    # All elements 
+# Integer Indexing 
+print("\nInteger Indexing:") 
+print(array[3])    # Element at index 3 
+print(array[[3, 5, 7]])  # Elements at indices 3, 5, 7 
+# Boolean Indexing 
+bool_index = np.array([True, False, True, False, True, False, True, False, True]) 
+print("\nBoolean Indexing:") 
+print(array[bool_index])  # Elements where bool_index is True 
+# Advanced Indexing 
+print("\nAdvanced Indexing:") 
+indices = np.array([3, 5, 7]) 
+print(array[indices])  # Elements at specified indices 
+# Negative Indexing 
+print("\nNegative Indexing:") 
+print(array[-3:])  # Last 3 elements 
+print(array[-5:-1])  # Elements from 5th last to 2nd last 
