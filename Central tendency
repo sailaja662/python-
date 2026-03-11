@@ -1,0 +1,15 @@
+import statistics 
+data = [10, 20, 20, 40, 50, 70, 80, 90] 
+# Central tendency measures 
+mean = statistics.mean(data) 
+median = statistics.median(data) 
+mode = statistics.mode(data) 
+# Measures of dispersion 
+variance = statistics.variance(data) 
+std_dev = statistics.stdev(data) 
+# Output the results 
+print(f"Mean: {mean}") 
+print(f"Median: {median}") 
+print(f"Mode: {mode}") 
+print(f"Variance: {variance}") 
+print(f"Standard Deviation: {std_dev}")
