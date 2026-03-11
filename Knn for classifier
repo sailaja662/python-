@@ -1,0 +1,33 @@
+# Importing necessary libraries 
+ import numpy as np 
+ import pandas as pd 
+ from sklearn.datasets import load_iris 
+ from sklearn.model_selection import train_test_split 
+ from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor 
+ from sklearn.metrics import accuracy_score, mean_squared_error 
+ # KNN for Classification 
+ # Load dataset 
+ iris = load_iris() 
+ X = iris.data 
+ y = iris.target 
+ # Split the dataset into training and testing sets 
+ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42) 
+ # Create KNN classifier 
+ knn_classifier = KNeighborsClassifier(n_neighbors=3) 
+ knn_classifier.fit(X_train, y_train)
+# Predict and evaluate 
+ y_pred_class = knn_classifier.predict(X_test) 
+ print("Classification Accuracy:", accuracy_score(y_test, y_pred_class)) 
+ # KNN for Regression 
+ # Create a simple dataset for regression 
+X_reg = np.array([[1], [2], [3], [4], [5]]) 
+ y_reg = np.array([1, 2, 3, 4, 5]) 
+ # Split the dataset 
+ X_train_reg, X_test_reg, y_train_reg, y_test_reg = train_test_split(X_reg, y_reg, 
+test_size=0.2, random_state=42) 
+ # Create KNN regressor 
+ knn_regressor = KNeighborsRegressor(n_neighbors=3) 
+ knn_regressor.fit(X_train_reg, y_train_reg) 
+ # Predict and evaluate 
+ y_pred_reg = knn_regressor.predict(X_test_reg) 
+ print("Regression Mean Squared Error:", mean_squared_error(y_test_reg, y_pred_reg))
