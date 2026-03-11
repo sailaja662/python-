@@ -1,0 +1,20 @@
+import pandas as pd 
+import numpy as np 
+df=pd.read_csv(“c:/users/STUDENT/Desktop/ml/data.csv”)
+# a. Attribute selection 
+# Selecting relevant attributes (excluding 'C' for the example) 
+df_selected = df[['A', 'B']] 
+# b. Handling Missing Values 
+# Filling missing values with the mean for numerical attributes 
+df_selected['A'].fillna(df_selected['A'].mean(), inplace=True) 
+df_selected['B'].fillna(df_selected['B'].mean(), inplace=True) 
+# c. Discretization 
+# Binning numerical values (discretization) 
+df_selected['A_bin'] = pd.cut(df_selected['A'], bins=[0, 4, 8], labels=['low', 'high']) 
+df_selected['B_bin'] = pd.cut(df_selected['B'], bins=[0, 3, 7], labels=['low', 'high']) 
+# d. Elimination of Outliers 
+# Defining outlier condition for 'A' 
+df_cleaned = df_selected[np.abs(df_selected['A'] - df_selected['A'].mean()) <= (3 * 
+df_selected['A'].std())] 
+print("Selected DataFrame:\n", df_selected) 
+print("Cleaned DataFrame:\n", df_cleaned)
